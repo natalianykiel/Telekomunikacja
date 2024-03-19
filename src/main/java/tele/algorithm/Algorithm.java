@@ -30,10 +30,31 @@ public class Algorithm {
 
         // Wyświetlanie zawartości outputInBits jako ciągu cyfr
         StringBuilder sb = new StringBuilder();
-        for (byte b : outputInBits) {
-            sb.append(b);
+        int a = 0;
+        boolean b = true;
+        for (byte outputInBit : outputInBits) {
+            if (a == 8) {
+                b = false;
+                sb.append(" ");
+            }
+
+            if (a == 0) {
+                b = true;
+            }
+
+            if (b) {
+                sb.append(outputInBit);
+                a++;
+            } else {
+                a--;
+            }
         }
+        sb.deleteCharAt(sb.length()-1);
         System.out.println(sb.toString());
+
+        a = 0;
+        b = true;
+        int c = 0;
 
         // Odczytanie nowej wartości dla outputInBits z konsoli
         Scanner scanner = new Scanner(System.in);
@@ -41,11 +62,26 @@ public class Algorithm {
         String bitsString = scanner.nextLine();
 
         // Sprawdzenie, czy wprowadzony ciąg ma odpowiednią długość
-        if (bitsString.length() != outputInBits.length) {
+        if (bitsString.length() != sb.length()) {
             System.out.println("Wprowadzony ciąg bitów ma nieprawidłową długość. Powinien mieć długość " + outputInBits.length);
         } else {
             for (int i = 0; i < outputInBits.length; i++) {
-                outputInBits[i] = (byte) Character.getNumericValue(bitsString.charAt(i));
+                if (a == 8) {
+                    b = false;
+                    c++;
+                }
+
+                if (a == 0) {
+                    b = true;
+                }
+
+                if (b) {
+                    outputInBits[i] = (byte) Character.getNumericValue(bitsString.charAt(c));
+                    a++;
+                    c++;
+                } else {
+                    a--;
+                }
             }
         }
         scanner.close();

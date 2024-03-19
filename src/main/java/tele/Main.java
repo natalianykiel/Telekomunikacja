@@ -26,26 +26,26 @@ public class Main {
 
         try {
             byte[] fileBytes = readAllBytesFromFile(filePath);
-            System.out.println("Pobrano " + fileBytes.length + " bajtów z pliku.");
+            System.out.println("Pobrano " + fileBytes.length + " bajtów z pliku start.txt");
 
             byte[] codedBytes = Algorithm.menageCodingBytes(fileBytes, matrix);
 
             // Zapisz codedBytes do pliku
             writeAllBytesToFile(outputPath, codedBytes);
-            System.out.println("Zapisano " + codedBytes.length + " bajtów do pliku wynikowego.");
+            System.out.println("Zapisano " + codedBytes.length + " bajtów po szyfrowaniu do pliku mid.txt");
         } catch (IOException e) {
             System.err.println("Wystąpił błąd: " + e.getMessage());
         }
 
         try {
             byte[] fileBytes = readAllBytesFromFile(outputPath);
-            System.out.println("Pobrano " + fileBytes.length + " bajtów z pliku.");
+            System.out.println("Pobrano " + fileBytes.length + " bajtów z mid.txx");
 
             byte[] uncodedBytes = Algorithm.menageDecodingBytes(fileBytes, matrix);
 
             // Zapisz codedBytes do pliku
             writeAllBytesToFile(finalPath, uncodedBytes);
-            System.out.println("Zapisano " + uncodedBytes.length + " bajtów do pliku wynikowego.");
+            System.out.println("Zapisano " + uncodedBytes.length + " bajtów po deszyfrowaniu do pliku end.txt");
         } catch (IOException e) {
             System.err.println("Wystąpił błąd: " + e.getMessage());
         }

@@ -1,6 +1,11 @@
 package tele.src.main.java.tele;
 
 public class Converter {
+    /**
+     * Metoda konwetująca znak byte na tablicę 8 bitową
+     * @param value
+     * @return 8 bitowa tablica
+     */
 
     public static byte[] byteNumberTo8bTab(byte value) {
         byte[] finalForm = new byte[8];
@@ -30,6 +35,11 @@ public class Converter {
         return finalForm;
     }
 
+    /**
+     * Metoda konwertującą tablicę bitową na tablicę byte'ów
+     * @param bits
+     * @return tablica byte'ów
+     */
     public static byte[] binaryChainToByteForm(byte[] bits) {
         int iterator = 0;
         byte[] finalForm = new byte[bits.length/8];

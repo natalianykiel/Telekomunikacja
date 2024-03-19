@@ -5,19 +5,28 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Czy chcesz popełnić 1 błąd czy 2?");
+        int choice = scanner.nextInt();
+        byte[][] matrix;
+        if (choice == 1) {
+            matrix = Patterns.H1;
+        } else {
+            matrix = Patterns.H2;
+        }
+
         String filePath = "src/main/java/tele/start.txt"; // Zmień na właściwą ścieżkę
         String outputPath = "src/main/java/tele/mid.txt"; // Zmień na właściwą ścieżkę
         String finalPath = "src/main/java/tele/end.txt"; // Zmień na właściwą ścieżkę
-        byte[][] matrix = Patterns.H1;
 
         try {
             byte[] fileBytes = readAllBytesFromFile(filePath);
             System.out.println("Pobrano " + fileBytes.length + " bajtów z pliku.");
-
 
             byte[] codedBytes = Algorithm.menageCodingBytes(fileBytes, matrix);
 

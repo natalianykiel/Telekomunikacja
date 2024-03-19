@@ -15,6 +15,7 @@ public class Decode {
                 break;
             }
         }
+        System.out.println("DECODE PO FOR");
         int errorBitNumber = -1;
         int errorBitNumber1 = -1;
         int errorBitNumber2 = -1;

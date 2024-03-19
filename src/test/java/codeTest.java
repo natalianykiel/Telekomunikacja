@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class codeTest {
 
     @Test
-    public void testCodingDecoding() {
+    public void testCodingDecodingH1() {
         byte[][] matrix = Patterns.H1; // Wybierz odpowiednią macierz do testu
         byte[] originalBytes = {'t','l' , 'd', 'k', 'f','j'}; // Dla przykładu zakładamy 5 bajtów
 
@@ -22,12 +22,26 @@ public class codeTest {
         // Odkodowanie zakodowanych bajtów
         byte[] decodedBytes = Algorithm.menageDecodingBytes(codedBytes, matrix);
 
-        System.out.println(Arrays.toString(originalBytes));
-        System.out.println(Arrays.toString(codedBytes));
-        System.out.println(Arrays.toString(decodedBytes));
 
         // Porównanie oryginalnych bajtów z odkodowanymi
-        //assertArrayEquals(originalBytes, decodedBytes);
+        assertArrayEquals(originalBytes, decodedBytes);
+    }
+
+    @Test
+    public void testCodingDecodingH2() {
+        byte[][] matrix = Patterns.H1; // Wybierz odpowiednią macierz do testu
+        byte[] originalBytes = {'t','l' , 'd', 'k', 'f','j'}; // Dla przykładu zakładamy 5 bajtów
+
+
+        // Zakodowanie bajtów
+        byte[] codedBytes = Algorithm.menageCodingBytes(originalBytes, matrix);
+
+        // Odkodowanie zakodowanych bajtów
+        byte[] decodedBytes = Algorithm.menageDecodingBytes(codedBytes, matrix);
+
+
+        // Porównanie oryginalnych bajtów z odkodowanymi
+        assertArrayEquals(originalBytes, decodedBytes);
     }
 }
 

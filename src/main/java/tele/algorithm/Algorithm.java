@@ -33,23 +33,20 @@ public class Algorithm {
         byte[] tempBinary = new byte[8];
         int wordLength = 8 + matrix.length;
 
-        System.out.println("przed for");
 
         //convert bytes to Binary
         for (int i = 0; i < outputInBytes.length; i++) {
             byte b = bytes[i];
             //zwraca 8 bitowa tabele po kodowaniu
             tempBinary = Decode.Decode(Converter.byteNumberTo8bTab(b), matrix);
-            System.out.println("&");
             //zapisujemy elementy z tablic 8 bitowych kolo siebie
             for (int j = i * 8; j <= (i * 8) + 7; j++) {
-                System.out.println(j);
                 inputInBits[j] = tempBinary[j/8];
             }
         }
         //konwersja outputu z bits na bytes
         outputInBytes = Converter.binaryChainToByteForm(inputInBits);
-        return inputInBits;
+        return outputInBytes;
 
     }
 }

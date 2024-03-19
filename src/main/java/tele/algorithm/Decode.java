@@ -7,15 +7,17 @@ public class Decode {
         int numberOfRows = matrix.length;
         byte[] errorTab = new byte[matrix.length + 8];
 
+
         errorTab = multiplyMatrixByVector(matrix, binaryTab);
         byte correct = 1;
         for (int i = 0; i < errorTab.length; i++) {
+
             if (errorTab[i] == 1) {
                 correct = 0;
                 break;
             }
         }
-        System.out.println("DECODE PO FOR");
+
         int errorBitNumber = -1;
         int errorBitNumber1 = -1;
         int errorBitNumber2 = -1;
@@ -34,6 +36,7 @@ public class Decode {
                     break;
                 }
             }
+
             //searching matrix columns which sum equals errorVector
             if (errorBitNumber == -1 && numberOfRows >= 7) {
                 for (int j1 = 0; j1 < numberOfColumns; j1++) {
@@ -59,10 +62,13 @@ public class Decode {
             }
         }
 
+
             //decode and repair
             int numberOfParityBits = matrix.length;
             byte[] tempBinary = new byte[matrix.length+8];
             System.arraycopy(binaryTab, 0, tempBinary, 0, 8);
+
+
 
             if (errorBitNumber != -1) {
                 // Korekcja jednego błędu
@@ -73,9 +79,10 @@ public class Decode {
                 tempBinary[errorBitNumber2] ^= 1;
             }
 
-            byte[] ouputDecoded = new byte[tempBinary.length-numberOfParityBits];
-            int newPosition = tempBinary.length-numberOfParityBits-1;
-            System.arraycopy(tempBinary, newPosition, ouputDecoded, 0, ouputDecoded.length);
+
+
+            byte[] ouputDecoded = new byte[tempBinary.length-numberOfParityBits]; //8
+            System.arraycopy(tempBinary, 0, ouputDecoded, 0, ouputDecoded.length);
             return ouputDecoded;
 
     }

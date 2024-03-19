@@ -1,6 +1,12 @@
 package tele.src.main.java.tele;
 
 public class Functions {
+    /**
+     * Metoda mnożąca macież H1/H2 z tablicą binarną
+     * @param matrix
+     * @param vector
+     * @return tablica błędu (binarna) porównująca ze sobą macież i tablice binarną
+     */
 
     public static byte[] multiplyMatrixByVector(byte[][] matrix, byte[] vector){
         byte[] result = new byte[matrix.length];

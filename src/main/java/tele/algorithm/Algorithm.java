@@ -5,6 +5,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Algorithm {
+    /**
+     * Metoda przygotowująca tablice bytes[] do kodowania i wywołująca funkcje kodującą code()
+     * @param bytes
+     * @param matrix
+     * @return zakodowana tablica byte'ów
+     */
     public static byte[] menageCodingBytes(byte[] bytes, byte[][] matrix) {
         byte[] outputInBytes = new byte[bytes.length];
         byte[] outputInBits = new byte[bytes.length * 16];
@@ -92,6 +98,13 @@ public class Algorithm {
         return  outputInBytes;
     }
 
+    /**
+     * Metoda przygotowująca tablice bytes[] do dekodowania i wywołująca funkcje kodującą decode()
+     * @param bytes
+     * @param matrix
+     * @return dekodowana tablica byte'ów
+     */
+
     public static byte[] menageDecodingBytes(byte[] bytes, byte[][] matrix){
         byte[] outputInBytes = new byte[bytes.length];
         byte[] inputInBits = new byte[matrix[0].length];
@@ -138,18 +151,6 @@ public class Algorithm {
         }
 
 
-/*
-            //zwraca 8 bitowa tabele po kodowaniu
-            tempBinary = Decode.Decode(Converter.byteNumberTo8bTab(b), matrix);
-            //System.out.println(i + ". " + tempBinary);
-            System.out.println(i + ". " + Arrays.toString(Converter.byteNumberTo8bTab(b)));
-
-            //zapisujemy elementy z tablic 8 bitowych kolo siebie
-            for (int j = i * 8; j <= (i * 8) + 7; j++) {
-                inputInBits[dodatkowaZmienna] = tempBinary[j % 8];
-            }
-        }
-       */
         //konwersja outputu z bits na bytes
         outputInBytes = Converter.binaryChainToByteForm(outputInBits);
         return outputInBytes;

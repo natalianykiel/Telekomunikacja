@@ -1,12 +1,16 @@
 package tele.src.main.java.tele.algorithm;
 import static tele.src.main.java.tele.Functions.multiplyMatrixByVector;
 public class Decode {
-
+    /**
+     * Metoda dekodująca tablice bitową (8 bitów + bity parzystosci)
+     * @param binaryTab
+     * @param matrix
+     * @return tablica 8 bitów
+     */
     public static byte[] Decode(byte[] binaryTab, byte [][] matrix) {
         int numberOfColumns = 8 + matrix.length;
         int numberOfRows = matrix.length;
         byte[] errorTab = new byte[matrix.length + 8];
-
 
         errorTab = multiplyMatrixByVector(matrix, binaryTab);
         byte correct = 1;
@@ -62,13 +66,10 @@ public class Decode {
             }
         }
 
-
             //decode and repair
             int numberOfParityBits = matrix.length;
             byte[] tempBinary = new byte[matrix.length+8];
             System.arraycopy(binaryTab, 0, tempBinary, 0, 8);
-
-
 
             if (errorBitNumber != -1) {
                 // Korekcja jednego błędu

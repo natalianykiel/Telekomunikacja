@@ -3,6 +3,12 @@ package tele.src.main.java.tele.algorithm;
 import static tele.src.main.java.tele.Functions.multiplyMatrixByVector;
 
 public class Code {
+    /**
+     * Metoda kodująca 8 bitową tablice
+     * @param binaryTab
+     * @param matrix
+     * @return zakodowana tablica bitowa
+     */
 
         public static byte[] Code(byte[] binaryTab, byte [][] matrix){
             int numberOfParityBits = matrix.length;
@@ -21,6 +27,7 @@ public class Code {
 
             System.arraycopy(parityBitsResult, 0, tempBinary, 8, numberOfParityBits);
 
+            System.out.println(tempBinary);
 
             return tempBinary;
         }

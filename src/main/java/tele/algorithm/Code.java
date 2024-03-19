@@ -19,9 +19,10 @@ public class Code {
             //nie wiem czy sie zmiesci
             parityBitsResult = multiplyMatrixByVector(matrix, tempBinary);
 
-            for(int i=8; i<numberOfParityBits; i++){
-                tempBinary[i] = parityBitsResult[i];
-            }
+            System.arraycopy(parityBitsResult, 0, tempBinary, 8, numberOfParityBits);
+
+            System.out.println(tempBinary);
+
             return tempBinary;
         }
 }

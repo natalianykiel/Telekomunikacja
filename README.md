@@ -27,7 +27,8 @@ WSKAZÓWKI DLA UZYTKOWNIKA:
    - Upewnij się, że plik, który chcesz przekształcić, jest w formacie obsługiwanym przez program.
    - Korzystaj z odpowiednich opcji programu do kodowania i dekodowania danych.
    - Dokładnie śledź komunikaty wyświetlane przez program, aby monitorować proces przekształcania danych.
-Dziękujemy za korzystanie z programu!
+   
+  Dziękujemy za korzystanie z programu!
 
 
 

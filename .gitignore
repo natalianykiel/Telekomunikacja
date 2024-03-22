@@ -26,8 +26,6 @@ replay_pid*
 # target folder
 target/
 
-# out folder 
-out/
 
 #.idea folder
 .idea/

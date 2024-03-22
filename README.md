@@ -1,50 +1,34 @@
 # Telekomunikacja
-Repozytorium prezentujące rozwiązania zagadnień związanych z Telekomunikacją i przetwarzaniem sygnałów.
-20 marca - zad 1
-10 kwietnia - zad 2
-15 maja - zad 3
-29 maja - zad 4
+PROGRAM DO WYKRYWANIA I KORYGOWANIA BŁĘDÓW TRANSMISJI
 
-D-sub9 wejscie kabla musi byc DAMKSKI 
-2-3
-3-2
-5-5
-kabel żyłowy, GIĘTKI!!
+Sformułowanie problemu:
+Program zajmuje się implementacją kodów korygujących błędy transmisji dla różnych przypadków. W szczególności:
 
-zad 1 - kod wykrywajacy i korygujacy błędy
+1. Opracowanie kodu korygującego pojedynczy błąd bitowy dla wiadomości ośmiobitowych (1 bajt).
+2. Opracowanie kodu korygującego podwójny błąd bitowy dla wiadomości ośmiobitowych (1 bajt).
 
-programem inicjujemy prace:
--spr czy pakiet doszedł bez błędu i wysyłamy kolejny
--jak z błędem to powtarzamy pakiet
+METODY TWORZENIA KODÓW:
 
-zad 2 - xmodem
+Program implementuje różne metody tworzenia kodów korygujących, takie jak:
 
--Na wartwie łącza danych ma byc xmodem 
--program mozna napisac w dowolnym jezyku programowania
+- Metoda powtarzania: Polega na wielokrotnym powtarzaniu wiadomości w celu zwiększenia odległości między słowami kodowymi.
+- Kodowanie algebraiczne: Wykorzystuje dodatkowe bity parzystości do wykrywania i korygowania błędów, przy czym te bity są obliczane na 
+  podstawie macierzy kontrolnej.
+  
+ZADANIE:
+Główne zadania programu to:
 
-zad 3
- - Huffman
-infomacje wysyłamy dwa razy wiekszą wiadomość- odbierany plik musi byc tylko dwa razy większy 
-trzeba spakować potem rozpakować 
-kody duzych i małych liter sa inne
-zliczamy jakie znaki sie pojawiły(na bmp tez działa) i te które sie najzadziej pojawiaja dostaja najdłuzsze kody i viceversa -> pakujemy, 
-wysyłamy i potem rozpkaowujemy w miejscu docelowym 
+- Opracowanie kodu korygującego pojedynczy błąd bitowy dla wiadomości ośmiobitowych.
+- Opracowanie kodu korygującego podwójny błąd bitowy dla wiadomości ośmiobitowych.
+- Napisanie programu przekodowującego dowolny plik do postaci zakodowanej jednym z opracowanych kodów (przygotowanie do transmisji) i odkodowywania go do postaci pierwotnej (odtworzenie danych po transmisji) z korekcją powstałych błędów. Program umożliwia operacje kodowania/odkodowania niezależnie od siebie, co pozwala na symulację błędów transmisji poprzez ręczną modyfikację pliku.
 
-zad 4 -przetwornic A/C i C/A
-piszemy program który przez łącze cyfrowe przesle nam dzwiek
-słuchawki+mikrogfon
-program ma z tego interfejsu z mikrofonu pobrac sygnał, prztworzyc i wysłać 
+WSKAZÓWKI DLA UZYTKOWNIKA:
 
-tzrema moc manipulowac programem w zaleznosci od 2 parametrów
--czestotliwosc kwantowania 
--poziomy kwantowania
-->suwaczek albo porętło
-
-skoro kazdy czlowiek ma rozna charakterystyke słuchu dlatego tzreba moc manipulować
-
-na ekranie mamy miec wyswietlony SNR(stosunek sygnału do szumu)
-RGB-dala przechodzacego swiatła
-??-dla odbitego
+   - Upewnij się, że plik, który chcesz przekształcić, jest w formacie obsługiwanym przez program.
+   - Korzystaj z odpowiednich opcji programu do kodowania i dekodowania danych.
+   - Dokładnie śledź komunikaty wyświetlane przez program, aby monitorować proces przekształcania danych.
+   - 
+Dziękujemy za korzystanie z programu!
 
 
 

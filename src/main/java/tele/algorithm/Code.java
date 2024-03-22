@@ -27,7 +27,6 @@ public class Code {
 
             System.arraycopy(parityBitsResult, 0, tempBinary, 8, numberOfParityBits);
 
-            System.out.println(tempBinary);
 
             return tempBinary;
         }

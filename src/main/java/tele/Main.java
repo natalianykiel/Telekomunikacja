@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Autorzy: Nykiel Natalia, Sałyga Ptaryk");
         System.out.println("Czy chcesz popełnić 1 błąd czy 2?");
         int choice = scanner.nextInt();
         byte[][] matrix;
@@ -20,9 +21,9 @@ public class Main {
             matrix = Patterns.H2;
         }
 
-        String filePath = "src/main/java/tele/start.txt"; // Zmień na właściwą ścieżkę
-        String outputPath = "src/main/java/tele/mid.txt"; // Zmień na właściwą ścieżkę
-        String finalPath = "src/main/java/tele/end.txt"; // Zmień na właściwą ścieżkę
+        String filePath = "src/main/java/tele/out/start.txt"; // Zmień na właściwą ścieżkę
+        String outputPath = "src/main/java/tele/out/mid.txt"; // Zmień na właściwą ścieżkę
+        String finalPath = "src/main/java/tele/out/end.txt"; // Zmień na właściwą ścieżkę
 
         try {
             byte[] fileBytes = readAllBytesFromFile(filePath);

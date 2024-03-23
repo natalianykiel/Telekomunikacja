@@ -1,4 +1,3 @@
-Telecommunications
 TRANSMISSION ERROR DETECTION AND CORRECTION PROGRAM
 
 PROGRAM_A - program containing a functional algorithm and test

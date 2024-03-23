@@ -1,6 +1,12 @@
 # Telekomunikacja
 PROGRAM DO WYKRYWANIA I KORYGOWANIA BŁĘDÓW TRANSMISJI
 
+  - PROGRAM_A - program zawierający działający algorytm i test
+  - PROGRAM_B -zawiera menu i działający algorytm
+------------------------------------------------------------------------------------------------------------------------------------
+  - Macierz H1 - przeznaczona do korekcji jednego błędów transmisji
+  - Macierz H2 - przeznaczona do korekcji dwóch błędów transmisji
+
 Sformułowanie problemu:
 Program zajmuje się implementacją kodów korygujących błędy transmisji dla różnych przypadków. W szczególności:
 

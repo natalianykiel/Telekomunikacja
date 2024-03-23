@@ -1,63 +1,39 @@
-# Telekomunikacja
-PROGRAM DO WYKRYWANIA I KORYGOWANIA BŁĘDÓW TRANSMISJI
+Telecommunications
+TRANSMISSION ERROR DETECTION AND CORRECTION PROGRAM
 
-  - PROGRAM_A - program zawierający działający algorytm i test
-  - PROGRAM_B -zawiera menu i działający algorytm
-------------------------------------------------------------------------------------------------------------------------------------
-  - Macierz H1 - przeznaczona do korekcji jednego błędów transmisji
-  - Macierz H2 - przeznaczona do korekcji dwóch błędów transmisji
+PROGRAM_A - program containing a functional algorithm and test
+PROGRAM_B - contains a menu and functional algorithm
+---------------------------------------------------------------------------------------------------------------------
+Matrix H1 - designed for correcting single transmission errors
+Matrix H2 - designed for correcting double transmission errors
+Problem Formulation:
+The program deals with the implementation of error correction codes for various transmission error scenarios. In particular:
 
-Sformułowanie problemu:
-Program zajmuje się implementacją kodów korygujących błędy transmisji dla różnych przypadków. W szczególności:
+Development of a code correcting single bit errors for eight-bit messages (1 byte).
+Development of a code correcting double bit errors for eight-bit messages (1 byte).
+METHODS OF CREATING CODES:
 
-1. Opracowanie kodu korygującego pojedynczy błąd bitowy dla wiadomości ośmiobitowych (1 bajt).
-2. Opracowanie kodu korygującego podwójny błąd bitowy dla wiadomości ośmiobitowych (1 bajt).
+The program implements various methods of creating error correction codes, such as:
 
-METODY TWORZENIA KODÓW:
+Repetition method: Involves repeating the message multiple times to increase the distance between codewords.
+Algebraic coding: Utilizes additional parity bits for error detection and correction, where these bits are calculated based on the parity check matrix.
+TASK:
+The main tasks of the program are:
 
-Program implementuje różne metody tworzenia kodów korygujących, takie jak:
+Development of a code correcting single bit errors for eight-bit messages.
+Development of a code correcting double bit errors for eight-bit messages.
+Writing a program to encode any file into one of the developed codes (preparation for transmission) and decoding it back to its original form (data recovery after transmission) with error correction. The program allows encoding/decoding operations independently, enabling simulation of transmission errors by manually modifying the file.
+USER TIPS:
 
-- Metoda powtarzania: Polega na wielokrotnym powtarzaniu wiadomości w celu zwiększenia odległości między słowami kodowymi.
-- Kodowanie algebraiczne: Wykorzystuje dodatkowe bity parzystości do wykrywania i korygowania błędów, przy czym te bity są obliczane na 
-  podstawie macierzy kontrolnej.
-  
-ZADANIE:
-Główne zadania programu to:
+Make sure the file you want to transform is in a format supported by the program.
+Utilize the appropriate program options for encoding and decoding data.
+Carefully monitor the messages displayed by the program to track the data transformation process.
+The "out" folder contains three built-in text files:
 
-- Opracowanie kodu korygującego pojedynczy błąd bitowy dla wiadomości ośmiobitowych.
-- Opracowanie kodu korygującego podwójny błąd bitowy dla wiadomości ośmiobitowych.
-- Napisanie programu przekodowującego dowolny plik do postaci zakodowanej jednym z opracowanych kodów (przygotowanie do transmisji) i odkodowywania go do postaci pierwotnej (odtworzenie danych po transmisji) z korekcją powstałych błędów. Program umożliwia operacje kodowania/odkodowania niezależnie od siebie, co pozwala na symulację błędów transmisji poprzez ręczną modyfikację pliku.
+start - a txt file that will be encoded and transmitted
+mid - a txt file representing start.txt after encoding
+end - a txt file after transmission and decoding
+The mid.txt file will always have a size exactly twice as large as start.txt/end.txt.
+It is possible to modify the program to work for any file. To achieve this, the Main class must be modified accordingly.
 
-WSKAZÓWKI DLA UZYTKOWNIKA:
-
-   - Upewnij się, że plik, który chcesz przekształcić, jest w formacie obsługiwanym przez program.
-   - Korzystaj z odpowiednich opcji programu do kodowania i dekodowania danych.
-   - Dokładnie śledź komunikaty wyświetlane przez program, aby monitorować proces przekształcania danych.
-
-Folder out zawiera wbudowane 3 pliki tekstowe:
-   - start - plik txt, który zostanie zakodowany i przesłany
-   - mid - plik txt będący plikiem start.txt po kodowaniu
-   - end - plik txt pod przesłaniu i odkodowaniu
-Plik mid.txt zawsze będzie miał rozmiar dokładnie dwa razy większy od start.txt/end.txt.
-
-Możliwa jest modyfikacja programu, aby działał dla dowolnego pliku. Aby to uzyskać należy zmodyfikować odpowiednio klasę Main.
-
-Dziękujemy za korzystanie z programu!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Thank you for using the program!

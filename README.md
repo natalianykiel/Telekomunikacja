@@ -10,7 +10,7 @@ The program deals with the implementation of error correction codes for various 
 
 1. Development of a code correcting single bit errors for eight-bit messages (1 byte).
 2. Development of a code correcting double bit errors for eight-bit messages (1 byte).
-3. 
+ 
 METHODS OF CREATING CODES:
 
 The program implements various methods of creating error correction codes, such as:

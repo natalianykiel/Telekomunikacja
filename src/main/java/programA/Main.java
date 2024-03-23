@@ -1,5 +1,5 @@
-package tele.src.main.java.tele;
-import tele.src.main.java.tele.algorithm.Algorithm;
+package tele.src.main.java.programA;
+import tele.src.main.java.programA.algorithm.Algorithm;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,9 +21,9 @@ public class Main {
             matrix = Patterns.H2;
         }
 
-        String filePath = "src/main/java/tele/out/start.txt"; // Zmień na właściwą ścieżkę
-        String outputPath = "src/main/java/tele/out/mid.txt"; // Zmień na właściwą ścieżkę
-        String finalPath = "src/main/java/tele/out/end.txt"; // Zmień na właściwą ścieżkę
+        String filePath = "src/main/java/programA/outPut/start.txt"; // Zmień na właściwą ścieżkę
+        String outputPath = "src/main/java/programA/outPut/mid.txt"; // Zmień na właściwą ścieżkę
+        String finalPath = "src/main/java/programA/outPut/end.txt"; // Zmień na właściwą ścieżkę
 
         try {
             byte[] fileBytes = readAllBytesFromFile(filePath);

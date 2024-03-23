@@ -1,5 +1,5 @@
-package tele.src.main.java.tele.algorithm;
-import static tele.src.main.java.tele.Functions.multiplyMatrixByVector;
+package tele.src.main.java.programA.algorithm;
+import static tele.src.main.java.programA.Functions.multiplyMatrixByVector;
 public class Decode {
     /**
      * Metoda dekodująca tablice bitową (8 bitów + bity parzystosci)

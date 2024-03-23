@@ -1,6 +1,6 @@
-package tele.src.main.java.tele.algorithm;
+package tele.src.main.java.programA.algorithm;
 
-import static tele.src.main.java.tele.Functions.multiplyMatrixByVector;
+import static tele.src.main.java.programA.Functions.multiplyMatrixByVector;
 
 public class Code {
     /**
